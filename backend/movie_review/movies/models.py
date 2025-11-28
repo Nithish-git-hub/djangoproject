@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Create your models here.
 from django.db import models
 from django.core.exceptions import ValidationError
@@ -7,23 +7,22 @@ def validate(value):
         raise ValidationError("text fields must not a numbers123")
 class Movie(models.Model):
     title = models.CharField(max_length=255,validators=[validate])
-=======
+
 
 
 # Create your models here.
 from django.db import models
 class Movie(models.Model):
     title = models.CharField(max_length=255)
->>>>>>> origin/main
     director = models.CharField(max_length=255)
     genre = models.CharField(max_length=50)
     release_date = models.DateField()
     description = models.TextField()
-<<<<<<< HEAD
+
     poster = models.URLField(max_length=500, blank=True, null=True)  
-=======
+
     poster = models.URLField(max_length=500, blank=True, null=True)  #
->>>>>>> origin/main
+
     created_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
 
@@ -32,4 +31,3 @@ class Movie(models.Model):
         return round(sum([r.rating for r in reviews])/reviews.count(),2) if reviews.exists() else 0
     def __str__(self):
         return self.title
-
