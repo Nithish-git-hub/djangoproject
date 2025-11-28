@@ -1,8 +1,8 @@
-// src/utils/axios.js
+
 import axios from "axios";
 
 const instance = axios.create({
-     baseURL: "https://djangoproject-1-yuar.onrender.com",
+     baseURL: "https://djangoproject-1-yuar.onrender.com/api/",
   // baseURL: "http://localhost:8000/api/",
   // baseURL: "https://fullstackdjango-5.onrender.com/api/",
 });
